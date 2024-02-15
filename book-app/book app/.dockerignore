@@ -1,0 +1,7 @@
+not required in the build
+
+DockerFile
+.dockerignore
+.gitignore
+
+node_modules

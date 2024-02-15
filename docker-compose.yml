@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./book-app/book app 
+    ports:
+      - "5000:5173" 
+
+  backend:
+    build:
+      context: ./api-express 
+    ports:
+      - "3000:3000" 
+    depends_on:
+      - mongodb 
+    environment:
+      HOSTDB: mongodb 
+      PORTDB: 27017 
+      MONGODB_DATABASE: nextu 
+
+  mongodb:
+    image: mongo:latest
